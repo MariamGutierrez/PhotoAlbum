@@ -1,14 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Crear elementos del DOM
-    const header = document.createElement("header");
-    header.className = "text-center py-4";
-    header.innerHTML = "<h1>Photo Album</h1>";
+    // Verificar si los elementos ya existen para evitar duplicaciones
+    if (!document.querySelector("header")) {
+        const header = document.createElement("header");
+        header.className = "text-center py-4";
+        header.innerHTML = "<h1>Photo Album</h1>";
+        document.body.appendChild(header);
+    }
 
-    const container = document.createElement("div");
-    container.className = "container";
+    let container = document.querySelector(".container");
+    if (!container) {
+        container = document.createElement("div");
+        container.className = "container";
+        document.body.appendChild(container);
+    }
 
-    const row = document.createElement("div");
-    row.className = "row";
+    let row = document.querySelector(".row");
+    if (!row) {
+        row = document.createElement("div");
+        row.className = "row";
+        container.appendChild(row);
+    }
+
+    // Limpiar el contenido anterior para evitar duplicados
+    row.innerHTML = "";
 
     // Datos de las imágenes
     const fotos = [
@@ -54,9 +68,4 @@ document.addEventListener("DOMContentLoaded", function () {
         col.appendChild(link);
         row.appendChild(col);
     });
-
-    // Ensamblar la estructura en el DOM
-    container.appendChild(row);
-    document.body.appendChild(header);
-    document.body.appendChild(container);
 });
