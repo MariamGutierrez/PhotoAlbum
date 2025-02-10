@@ -4,6 +4,6 @@
 - **Mariam Gutierrez**  
 - **Catalina Quijano**  
 
-🔗 [🌍 Ver la web](https://mariamgutierrez.github.io/PhotoAlbum/)
+🔗 [🌍 Ver la pagina](https://mariamgutierrez.github.io/PhotoAlbum/)
 
 
