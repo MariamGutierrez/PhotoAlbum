@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.appendChild(header);
     }
 
+
+
     let container = document.querySelector(".container");
     if (!container) {
         container = document.createElement("div");
@@ -26,15 +28,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Datos de las imágenes
     const fotos = [
-        { img: "photo1.jpg", titulo: "Foto 1", desc: "Esta es la primera imagen" },
-        { img: "photo2.jpg", titulo: "Foto 2", desc: "Esta es la segunda imagen" },
-        { img: "photo3.jpg", titulo: "Foto 3", desc: "Esta es la tercera imagen" },
-        { img: "photo4.jpg", titulo: "Foto 4", desc: "Esta es la cuarta imagen" },
-        { img: "photo5.jpg", titulo: "Foto 5", desc: "Esta es la quinta imagen" },
-        { img: "photo6.jpg", titulo: "Foto 6", desc: "Esta es la sexta imagen" },
-        { img: "photo7.jpg", titulo: "Foto 7", desc: "Esta es la séptima imagen" },
-        { img: "photo8.jpg", titulo: "Foto 8", desc: "Esta es la octava imagen" },
-        { img: "photo9.jpg", titulo: "Foto 9", desc: "Esta es la novena imagen" },
+        { img: "photo1.jpg", titulo: "Catto u3u", desc: "Esta es la primera imagen" },
+        { img: "photo2.jpg", titulo: "Kirby u0u", desc: "Esta es la segunda imagen" },
+        { img: "photo3.jpg", titulo: "<3", desc: "Esta es la tercera imagen" },
+        { img: "photo4.jpg", titulo: "Aster", desc: "Esta es la cuarta imagen" },
+        { img: "photo5.jpg", titulo: "yae miko", desc: "Esta es la quinta imagen" },
+        { img: "photo6.jpg", titulo: "Luca", desc: "Esta es la sexta imagen" },
+        { img: "photo7.jpg", titulo: "Emma", desc: "Esta es la séptima imagen" },
+        { img: "photo8.jpg", titulo: "Emma", desc: "Esta es la octava imagen" },
+        { img: "photo9.jpg", titulo: "MyMelody", desc: "Esta es la novena imagen" },
     ];
 
     // Generar las tarjetas de imágenes
@@ -46,19 +48,23 @@ document.addEventListener("DOMContentLoaded", function () {
         link.href = `detalle.html?img=${foto.img}&titulo=${encodeURIComponent(foto.titulo)}&desc=${encodeURIComponent(foto.desc)}`;
 
         const card = document.createElement("div");
-        card.className = "card";
-
+        card.className = "card"; // Se aplica la clase con los estilos de Polaroid
+        
         const img = document.createElement("img");
         img.src = `assets/imagenes/${foto.img}`;
         img.className = "card-img-top";
         img.alt = foto.titulo;
-
+        img.style.width = "100%";  
+        img.style.height = "200px"; 
+        img.style.objectFit = "cover";  
+        img.style.borderRadius = "10px"; // Bordes redondeados como Polaroid
+        
         const cardBody = document.createElement("div");
         cardBody.className = "card-body";
-
+        
         const cardText = document.createElement("p");
         cardText.className = "card-text";
-        cardText.textContent = `Descripción de ${foto.titulo}.`;
+        cardText.textContent = `${foto.titulo}.`;
 
         // Construcción de la estructura
         cardBody.appendChild(cardText);
@@ -69,4 +75,5 @@ document.addEventListener("DOMContentLoaded", function () {
         row.appendChild(col);
     });
 });
+
 
