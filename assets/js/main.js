@@ -69,3 +69,4 @@ document.addEventListener("DOMContentLoaded", function () {
         row.appendChild(col);
     });
 });
+
