@@ -12,6 +12,12 @@ header {
     font-weight: bold;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    transition: background-color 0.3s, color 0.3s; /* Efecto suave */
+}
+
+.light-theme {
+    background-color: #FFE4E1; /* Fondo claro */
+    color: white; /* Texto oscuro */
 }
 
 .pattaya-regular {
@@ -95,4 +101,56 @@ a:hover {
     font-size: 20px;
     font-weight: bold;
     margin: 10px 0 5px 0;
+}
+
+.dark-theme {
+    background-color: #451c44;  /* Fondo oscuro */
+    color: rgb(164, 128, 204);            /* Texto claro */
+}
+
+.dark-theme .card {
+    background: #844fa4;        /* Tarjetas más oscuras */
+    color: rgb(188, 142, 199);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.dark-theme .card-body {
+    background: #844fa4;        /* Tarjetas más oscuras */
+    color: rgb(188, 142, 199);
+}
+
+.dark-theme .card-text {
+    font-size: 30px;
+    color: rgb(218, 171, 201);
+}
+
+.dark-theme header {
+    background-color: #984f9f;
+    color: white;
+}
+
+.light-theme header {
+    background-color: #FFB6C1;
+    color: white;
+}
+
+#themeIcon {
+    width: 16px;  /* Ajusta el tamaño de la imagen */
+    height: 16px;
+    margin-right: 5px; /* Espacio entre la imagen y el texto */
+}
+
+#themeToggle {
+    background: transparent; /* Hace que el fondo sea transparente */
+    border: none; /* Elimina el borde */
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 16px; /* Ajusta el tamaño del texto */
+    color: white; /* Ajusta el color del texto según el tema */
+}
+
+button {
+    all: unset; /* Resetea los estilos predeterminados */
 }
