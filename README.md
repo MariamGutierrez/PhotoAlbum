@@ -1,5 +1,9 @@
-﻿# PhotoAlbum
-Proyect by 
-Mariam Gutierrez & Catalina Quijano
-[Ver web]([https://www.ejemplo.com](https://mariamgutierrez.github.io/PhotoAlbum/))
+# 📷 PhotoAlbum
+
+## 👥 Proyecto desarrollado por:
+- **Mariam Gutierrez**  
+- **Catalina Quijano**  
+
+🔗 [🌍 Ver la web](https://mariamgutierrez.github.io/PhotoAlbum/)
+
 
