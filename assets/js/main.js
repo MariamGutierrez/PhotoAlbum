@@ -76,4 +76,46 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const body = document.body;
+    const header = document.getElementById("mainHeader");
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+
+    // Verificar si hay un tema guardado en localStorage
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+        body.classList.add("dark-theme");
+        header.classList.add("dark-theme");
+        themeIcon.src = "assets/imagenes/night.png"; // Imagen para el tema oscuro
+    } else {
+        body.classList.add("light-theme");
+        header.classList.add("light-theme");
+        themeIcon.src = "assets/imagenes/day.png"; // Imagen para el tema claro
+    }
+
+    // Evento de clic en el botón para cambiar el tema
+    themeToggle.addEventListener("click", function () {
+        if (body.classList.contains("light-theme")) {
+            body.classList.remove("light-theme");
+            body.classList.add("dark-theme");
+
+            header.classList.remove("light-theme");
+            header.classList.add("dark-theme");
+
+            themeIcon.src = "assets/imagenes/night.png"; // Cambia la imagen del botón
+            localStorage.setItem("theme", "dark");
+        } else {
+            body.classList.remove("dark-theme");
+            body.classList.add("light-theme");
+
+            header.classList.remove("dark-theme");
+            header.classList.add("light-theme");
+
+            themeIcon.src = "assets/imagenes/day.png"; // Cambia la imagen del botón
+            localStorage.setItem("theme", "light");
+        }
+    });
+});
 
